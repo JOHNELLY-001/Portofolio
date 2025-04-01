@@ -11,7 +11,15 @@
     <div class="bg-black min-h-screen">
             
             <div class=" p-4 flex justify-between ">
-                <div class="text-2xl text-teal-300 font-serif font-bold ml-5 p-1">EllyJohns</div>
+                <div class="text-teal-300 ml-5 p-1">
+                    <span class="text-2xl font-serif font-bold">Ellyjohns</span>
+                    <span class="relative flex h-3 w-3 ml-12">
+                        <!-- Ping effect (hidden by default but visible when animating) -->
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-300 opacity-75"></span>
+                        <!-- Static dot -->
+                        <span class="relative inline-flex rounded-full h-3 w-3 bg-teal-500"></span>
+                      </span>
+                </div>
                 <nav class="space-x-20 text-lg font-mono font-bold mr-28">
                     <a class="text-white hover:text-teal-500" href="#">Home</a>
                     <a class="text-white hover:text-teal-500" href="aboutme.html">About</a>
@@ -38,9 +46,9 @@
                     </div>
                 </div>
     
-                <div class="lg:flex justify-center md:flex justify-center ">
+                <div class="lg:flex justify-center md:flex justify-center pl-12">
                     <div class="text-lg md:pl-5 w-1/2">
-                        <p><img class="rounded-b-full" src="PicsArt_12-18-06.58.11.jpg" alt=""></p>
+                        <p><img class="rounded-b-full" src="PicsArt_12-18-06.58.11.jpg" alt="HIM"></p>
                     </div>
                 </div>
     
@@ -53,9 +61,18 @@
             <div>
 
             </div>
-            <div class="flex space-x-10 text-black text-sm ml-32">
-                <button class="bg-teal-400 p-3 rounded-full font-semibold hover:bg-teal-600">HIRE ME</button>
-                <button class="bg-teal-400 p-3 rounded-full font-semibold hover:bg-teal-600">DOWNLOAD CV</button>
+            <div class="flex justify-between">
+                <div class="flex space-x-10 text-black text-sm ml-32">
+                    <button class="bg-teal-400 px-4 py-1 rounded-xl font-semibold hover:bg-teal-600">HIRE ME</button>
+                    <button class="bg-teal-400 px-4 py-1 rounded-xl font-semibold hover:bg-teal-600">DOWNLOAD CV</button>
+                </div>
+                <div class="flex space-x-6 text-3xl text-gray-400 hover:[&>*] mt-5 mr-48">
+                    <i class='bx bxl-facebook hover:text-blue-700 transition duration-300 transform hover:scale-110'></i>
+                    <i class='bx bxl-linkedin hover:text-blue-600 transition duration-300 transform hover:scale-110'></i>
+                    <i class='bx bxl-whatsapp hover:text-green-500 transition duration-300 transform hover:scale-110'></i>
+                    <i class='bx bxl-instagram hover:text-pink-600 transition duration-300 transform hover:scale-110'></i>
+                    <i class='bx bxl-twitter hover:text-sky-400 transition duration-300 transform hover:scale-110'></i>
+                </div>
             </div>
         
                 
