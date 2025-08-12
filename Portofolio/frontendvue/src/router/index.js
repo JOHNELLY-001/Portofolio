@@ -3,6 +3,7 @@ import BlogSection from '@/views/BlogSection.vue'
 import ContactSection from '@/views/ContactSection.vue'
 import HeroSection from '@/views/HeroSection.vue'
 import ResumeSection from '@/views/ResumeSection.vue'
+import ProjectSection from '@/views/ProjectSection.vue'
 import Vue from 'vue'
 import Router from 'vue-router'
 
