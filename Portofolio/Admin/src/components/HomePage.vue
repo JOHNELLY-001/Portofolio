@@ -1,22 +1,27 @@
 <template>
+  <div class="form">
     <form @submit.prevent="uploadFile" enctype="multipart/form-data">
+
+      <div class="content">
         <select v-model="category" required>
             <option disabled value="">Choose Category</option>
             <option value="home">Home</option>
         </select>
 
-            <div v-if="category === 'home'">
-                <input 
-                type="text"
-                v-model="form.name"
-                placeholder="name"
-                required
-                class="input-style"/>
-                <input type="file" @change="handleFile" required class="input-style"/>
-            </div>
-
-            <button type="submit">Upload</button>
+        <div v-if="category === 'home'">
+            <input 
+            type="text"
+            v-model="form.name"
+            placeholder="name"
+            required
+            class="input-style"/>
+            <input type="file" @change="handleFile" required class="input-style"/>
+        </div>
+      </div>
+                  <br>
+            <button type="submit" class="button">Upload</button>
     </form>
+  </div>
 
 </template>
 
@@ -55,7 +60,7 @@ export default {
       formData.append('media', this.media);
 
       try {
-        const endpoint = `http://localhost:3000/api/${this.category}/upload`; // TODO: Add your actual backend endpoint
+        const endpoint = `http://localhost:3000/api/${this.category}/upload`; 
         await axios.post(endpoint, formData, {
           headers: { 'Content-Type': 'multipart/form-data' }
         });
@@ -72,3 +77,22 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+.form{
+    /* background:fixed; */
+    
+}
+
+.button{
+  background-color: rgb(86, 206, 6);
+  border-radius: 30%;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.content{
+  /* padding-top: 10%;
+  padding-bottom: 10%; */
+}
+</style>
