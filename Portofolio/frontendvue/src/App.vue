@@ -1,28 +1,33 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div :class="theme">
+    <Navbar :theme="theme" @toggle-theme="toggleTheme" />
+    <router-view />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Navbar from './components/NavbarSection.vue'
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  components: { Navbar },
+  data() {
+    return { theme: 'dark' }
+  },
+  methods: {
+    toggleTheme() {
+      this.theme = this.theme === 'dark' ? 'light' : 'dark'
+    }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.dark {
+  background-color: black;
+  color: white;
+}
+.light {
+  background-color: white;
+  color: black;
 }
 </style>
