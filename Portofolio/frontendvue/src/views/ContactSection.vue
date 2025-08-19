@@ -94,15 +94,16 @@ export default {
     async sendMessage() {
       try {
         const result = await emailjs.send(
-          "service_l5gilgd",      // ✅ your EmailJS service ID
-          "template_hvcsxlc",     // ✅ your EmailJS template ID
-          {
-            name: this.form.name,        // {{name}} in template
-            email: this.form.email,      // {{email}} in template (used in Reply-To)
-            title: this.form.message     // {{title}} in template
-          },
-          "UH5xJ3aauDQjRbVf9"      // ✅ your EmailJS public key
+          process.env.VUE_APP_EMAILJS_SERVICE_ID,
+          process.env.VUE_APP_EMAILJS_TEMPLATE_ID,
+        {
+          name: this.form.name,
+          email: this.form.email,
+          title: this.form.message
+        },
+          process.env.VUE_APP_EMAILJS_USER_ID
         );
+
 
         alert("✅ Message sent successfully!");
         console.log("EmailJS result:", result.text);
