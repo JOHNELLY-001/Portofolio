@@ -10,7 +10,7 @@
     <div class="grid md:grid-cols-2 gap-10 items-center">
       <!-- Image -->
       <div class="flex justify-center">
-        <img :src="require('@/assets/images/PSX_20250421_111211.jpg')"  alt="John Elly" 
+        <img :src="require('@/assets/images/PicsArt_12-18-06.58.11.jpg')"  alt="John Elly" 
              class="rounded-2xl shadow-lg w-80 hover:scale-105 transform transition duration-500">
       </div>
 
@@ -29,11 +29,15 @@
           <ul class="space-y-3">
             <li class="flex items-center">
               <span class="text-teal-400 mr-3"><i class='bx bx-music'></i></span>
-              Writing, composing & performing original music
+              Developing web & mobile applications
             </li>
             <li class="flex items-center">
               <span class="text-teal-400 mr-3"><i class='bx bx-code-alt'></i></span>
-              Developing web & mobile applications
+              Building and troubleshooting computer networks
+            </li>
+            <li class="flex items-center">
+              <span class="text-teal-400 mr-3"><i class='bx bx-code-alt'></i></span>
+              Writing, composing & performing music
             </li>
             <li class="flex items-center">
               <span class="text-teal-400 mr-3"><i class='bx bx-brain'></i></span>
