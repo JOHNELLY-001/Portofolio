@@ -16,9 +16,10 @@
             <h4 class="text-xl font-bold text-teal-300">{{ post.title }}</h4>
             <p class="text-gray-400 text-sm">{{ post.date }}</p>
             <p class="mt-3">{{ post.excerpt }}</p>
+
+            <a :href="post.link" target="_blank"
+             class="inline-block mt-2 text-teal-400 hover:underline">Read More →</a>
           </div>
-          <a :href="post.link" target="_blank"
-             class="inline-block mt-4 text-teal-400 hover:underline">Read More →</a>
         </div>
       </div>
     </div>
@@ -31,25 +32,25 @@ export default {
     return {
       posts: [
         {
-          title: 'The Intersection of Music & AI',
-          date: 'Aug 2025',
-          excerpt: 'Exploring how artificial intelligence is transforming music production and composition.',
-          image: require('@/assets/images/netflix.movies_tvshows.jpeg'),
-          link: '#'
-        },
-        {
-          title: 'How I Built My Portfolio SPA',
+          title: 'The Evolution of Software',
           date: 'Jul 2025',
-          excerpt: 'A step-by-step breakdown of creating this very site using Vue and Tailwind.',
-          image: require('@/assets/images/People.png'),
-          link: '#'
+          excerpt: 'Exploring the future of Programming and how software has been evolving.',
+          image: require('@/assets/images/software.jpg'),
+          link: 'https://www.linkedin.com/posts/john-elly-55a16228a_software-30-the-future-of-programming-activity-7343593490376777730-tIQ4?utm_source=share&utm_medium=member_android&rcm=ACoAAEYlYpYB0J22k0lDY73zG7BRh_e9ANWM6Xc'
         },
         {
-          title: 'Composing for Video Games',
-          date: 'Jun 2025',
-          excerpt: 'An inside look at how I create immersive soundtracks for indie games.',
-          image: require('@/assets/images/porto.webp'),
-          link: '#'
+          title: 'How I Built prompt-aware AI',
+          date: 'Jul 2025',
+          excerpt: 'I successfully reached a milestone of building a simple propt-aware AI that can offer first ad tips, give movies and weather recommendation.',
+          image: require('@/assets/images/PSX_20250426_164607.jpg'),
+          link: 'https://www.linkedin.com/posts/john-elly-55a16228a_python-ai-rulebasedai-activity-7344071753041649664-ajCw?utm_source=share&utm_medium=member_android&rcm=ACoAAEYlYpYB0J22k0lDY73zG7BRh_e9ANWM6Xc'
+        },
+        {
+          title: 'Thinking of Environment Suistainability',
+          date: 'Jul 2025',
+          excerpt: 'How can the environment meet the needs of humanity with all the destruction and harmful activities going on..?',
+          image: require('@/assets/images/env.jpg'),
+          link: 'https://www.linkedin.com/posts/john-elly-55a16228a_environment-greenenergy-sustainableenvironment-activity-7347914502299959297-ik9Q?utm_source=share&utm_medium=member_android&rcm=ACoAAEYlYpYB0J22k0lDY73zG7BRh_e9ANWM6Xc'
         }
       ]
     }
