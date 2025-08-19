@@ -32,16 +32,24 @@
     </div>
 
     <!-- Social Links -->
-    <div class="text-center mt-10 space-x-6">
+    <!-- <div class="text-center mt-10 space-x-6">
       <a v-for="(link, index) in socialLinks" :key="index" :href="link.url" target="_blank"
          class="text-teal-400 hover:text-teal-200 text-xl">
         <i :class="link.icon"></i>
       </a>
-    </div>
+    </div> -->
+    <div class="flex space-x-4 text-3xl text-gray-400 mt-6 justify-center ">
+        <a href="https://facebook.com/John Elly" class="hover:text-blue-700"><i class='bx bxl-facebook'></i></a>
+        <a href="https://github.com/JOHNELLY-001" class="hover:text-white"><i class='bx bxl-github'></i></a>
+        <a href="https://www.linkedin.com/in/john-elly-55a16228a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="hover:text-blue-600"><i class='bx bxl-linkedin'></i></a>
+        <a href="https://wa.me/message/QTXKOXDK7YDDO1" class="hover:text-green-500"><i class='bx bxl-whatsapp'></i></a>
+        <a href="https://instagram.com/its_sam.elly" class="hover:text-pink-600"><i class='bx bxl-instagram'></i></a>
+        <a href="#" class="hover:text-sky-400"><i class='bx bxl-twitter'></i></a>
+      </div>
   </section>
 </template>
 
-<script>
+<!-- <script>
 export default {
   data() {
     return {
@@ -50,12 +58,12 @@ export default {
         email: '',
         message: ''
       },
-      socialLinks: [
-        { icon: 'fab fa-github', url: 'https://github.com/yourusername' },
-        { icon: 'fab fa-linkedin', url: 'https://linkedin.com/in/yourusername' },
-        { icon: 'fab fa-twitter', url: 'https://twitter.com/yourusername' },
-        { icon: 'fab fa-instagram', url: 'https://instagram.com/yourusername' }
-      ]
+      // socialLinks: [
+      //   { icon: 'fab fa-github', url: 'https://github.com/yourusername' },
+      //   { icon: 'fab fa-linkedin', url: 'https://linkedin.com/in/yourusername' },
+      //   { icon: 'fab fa-twitter', url: 'https://twitter.com/yourusername' },
+      //   { icon: 'fab fa-instagram', url: 'https://instagram.com/yourusername' }
+      // ]
     }
   },
   methods: {
@@ -67,7 +75,46 @@ export default {
     }
   }
 }
+</script> -->
+
+<script>
+import emailjs from "emailjs-com";
+
+export default {
+  data() {
+    return {
+      form: {
+        name: "",
+        email: "",
+        message: ""
+      }
+    };
+  },
+  methods: {
+    async sendMessage() {
+      try {
+        const result = await emailjs.send(
+          "service_l5gilgd",      // from EmailJS
+          "template_hvcsxlc",     // from EmailJS
+          {
+            from_name: this.form.name,
+            reply_to: this.form.email,
+            message: this.form.message
+          },
+          "UH5xJ3aauDQjRbVf9"       // from EmailJS
+        );
+        alert("Message sent successfully!");
+        console.log(result.text);
+        this.form = { name: "", email: "", message: "" }; // reset form
+      } catch (error) {
+        alert("Failed to send message. Try again.");
+        console.error(error);
+      }
+    }
+  }
+};
 </script>
+
 
 <!-- FontAwesome icons -->
 <style>
