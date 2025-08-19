@@ -94,21 +94,24 @@ export default {
     async sendMessage() {
       try {
         const result = await emailjs.send(
-          "service_l5gilgd",      // from EmailJS
-          "template_hvcsxlc",     // from EmailJS
+          "service_l5gilgd",      // ✅ your EmailJS service ID
+          "template_hvcsxlc",     // ✅ your EmailJS template ID
           {
-            from_name: this.form.name,
-            reply_to: this.form.email,
-            message: this.form.message
+            name: this.form.name,        // {{name}} in template
+            email: this.form.email,      // {{email}} in template (used in Reply-To)
+            title: this.form.message     // {{title}} in template
           },
-          "UH5xJ3aauDQjRbVf9"       // from EmailJS
+          "UH5xJ3aauDQjRbVf9"      // ✅ your EmailJS public key
         );
-        alert("Message sent successfully!");
-        console.log(result.text);
-        this.form = { name: "", email: "", message: "" }; // reset form
+
+        alert("✅ Message sent successfully!");
+        console.log("EmailJS result:", result.text);
+
+        // reset form
+        this.form = { name: "", email: "", message: "" };
       } catch (error) {
-        alert("Failed to send message. Try again.");
-        console.error(error);
+        alert("❌ Failed to send message. Please try again.");
+        console.error("EmailJS error:", error);
       }
     }
   }
