@@ -47,28 +47,29 @@ export default {
     return {
       timeline: [
         {
-          title: 'Software Developer - SmartMinds',
-          period: '2022 - Present',
+          title: 'Software Developer - SmartMinds.tech',
+          period: '2023 - Present',
           description: 'Developing web and mobile solutions for clients using modern tech stacks.'
         },
         {
           title: 'Freelance Musician',
-          period: '2019 - Present',
-          description: 'Performing live shows, composing music, and collaborating with artists.'
+          period: '2017 - Present',
+          description: 'Composing music, making melodies and collaborating with talented musicians. (Gospel & Inspirational songs)'
         },
         {
-          title: 'Bachelor in Computer Science',
-          period: '2018 - 2022',
-          description: 'Specialized in AI and web development at XYZ University.'
+          title: 'Bachelor of science in Telecommunication Engineering',
+          period: '2023 - 2027',
+          description: 'Specialized in Computer networking and configuring network protocols at University of Dar-Es-Salaam.'
         }
       ],
       skills: [
-        { name: 'JavaScript / Vue.js', level: 'Advanced' },
-        { name: 'TailwindCSS', level: 'Advanced' },
+        { name: 'JavaScript / Vue.js', level: 'Intermediate' },
+        { name: 'TailwindCSS', level: 'Intermediate' },
         { name: 'Python / Machine Learning', level: 'Intermediate' },
-        { name: 'Music Production', level: 'Advanced' },
-        { name: 'Audio Engineering', level: 'Intermediate' },
-        { name: 'UI/UX Design', level: 'Intermediate' }
+        { name: 'Music Production', level: 'Intermediate' },
+        { name: 'Networking Engineering', level: 'Intermediate' },
+        { name: 'UI/UX Design', level: 'Intermediate' },
+        { name: 'Mobile App Dev.', level: 'Intermediate' }
       ]
     }
   }
