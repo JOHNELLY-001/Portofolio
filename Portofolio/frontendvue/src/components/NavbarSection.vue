@@ -9,14 +9,14 @@
       </span>
     </div>
 
-    <!-- Links -->
+    <!-- Links (scroll to sections) -->
     <nav class="space-x-10 text-lg font-mono font-bold hidden md:flex">
-      <router-link to="/" class="text-white hover:text-teal-500 transition">Home</router-link>
-      <router-link to="/about" class="text-white hover:text-teal-500 transition">About</router-link>
-      <router-link to="/projects" class="text-white hover:text-teal-500 transition">Projects</router-link>
-      <router-link to="/resume" class="text-white hover:text-teal-500 transition">Resume</router-link>
-      <router-link to="/blog" class="text-white hover:text-teal-500 transition">Blog</router-link>
-      <router-link to="/contact" class="text-white hover:text-teal-500 transition">Contact</router-link>
+      <a href="#home" class="text-white hover:text-teal-500 transition">Home</a>
+      <a href="#about" class="text-white hover:text-teal-500 transition">About</a>
+      <a href="#projects" class="text-white hover:text-teal-500 transition">Projects</a>
+      <a href="#resume" class="text-white hover:text-teal-500 transition">Resume</a>
+      <a href="#blog" class="text-white hover:text-teal-500 transition">Blog</a>
+      <a href="#contact" class="text-white hover:text-teal-500 transition">Contact</a>
     </nav>
 
     <!-- Theme toggle -->
@@ -39,3 +39,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+html {
+  scroll-behavior: smooth; /* Smooth scrolling effect */
+}
+</style>
