@@ -51,41 +51,41 @@ export default {
     return {
       devProjects: [
         {
-          title: 'SmartMinds Website',
-          description: 'Company landing page with animations and responsive design.',
-          image: require('@/assets/images/People.png'),
+          title: 'EmployeeTranfer Portal',
+          description: 'A platform that simplify job trasfer process by connecting employees who want to transfer their job location',
+          image: require('@/assets/images/employee.png'),
           link: '#'
         },
         {
-          title: 'AI Music Generator',
-          description: 'An AI-powered tool that composes melodies in different genres.',
-          image: require('@/assets/images/protocols.jpeg'),
-          link: '#'
+          title: 'Football academy',
+          description: 'Official Gaydo Sports centre website page created in colab with Gibsoni Tech Solutions',
+          image: require('@/assets/images/gaydo1.png'),
+          link: 'https://gaydofootballacademy.vercel.app/'
         },
         {
-          title: 'Portfolio SPA',
-          description: 'Single Page Application for showcasing personal projects.',
-          image: require('@/assets/images/netflix.movies_tvshows.jpeg'),
+          title: 'BingwaFix',
+          description: 'An official platform that connects verified Fundi for all your serveice needs',
+          image: require('@/assets/images/smartfundi.png'),
           link: '#'
         }
       ],
       musicProjects: [
         {
-          title: 'Midnight Jazz',
-          description: 'A smooth jazz track recorded with live instruments.',
-          image: require('@/assets/images/PSX_20250421_111211.jpg'),
+          title: 'In progress',
+          description: 'Still in progress... coming soon!',
+          image: require('@/assets/images/music1.jpg'),
           link: '#'
         },
         {
-          title: 'Synthwave Dreams',
-          description: 'Electronic music inspired by retro 80s vibes.',
-          image: require('@/assets/images/PSX_20250421_111211.jpg'),
+          title: 'In progress',
+          description: 'Still in progress... coming soon!',
+          image: require('@/assets/images/music2.jpg'),
           link: '#'
         },
         {
-          title: 'Acoustic Sunrise',
-          description: 'Relaxing acoustic guitar composition for early mornings.',
-          image: require('@/assets/images/PSX_20250421_111211.jpg'),
+          title: 'In progress',
+          description: 'Still in progress... coming soon!',
+          image: require('@/assets/images/1417702.jpg'),
           link: '#'
         }
       ]
